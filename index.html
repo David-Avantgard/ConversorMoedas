@@ -1,0 +1,110 @@
+<!--------------------------------------------------------------------------------------------------
+Autor: David Carvalho
+Fecha: 26/12/2025
+Proyecto: Conversor de Monedas
+Descripción: Proyecto de estudio desarrollado durante el proceso de desarrollo full stack en DevClub.
+Monedas utilizadas: BRL, USD, EUR, GBP, BTC
+---------------------------------------------------------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Conversor de Monedas | DevClub</title>
+   
+    <!-- Favicon -->
+    <link rel="icon" href="./assets/favicon.png" type="image/x-icon">
+   
+    <!-- Basic Configuration -->
+    <meta name="description"
+        content="Projeto de estudo: conversor de moedas desenvolvido em HTML, CSS e JavaScript durante a jornada Full Stack no DevClub.">
+    <meta name="author" content="David Carvalho">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap"
+        rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <!-- Rotating Ticker -->
+        <div class="ticker">
+            <div class="ticker-track" id="ticker-track">
+                <div class="ticker-content" id="ticker-content"></div>
+                <div class="ticker-content" id="ticker-content-clone"></div>
+            </div>
+        </div>
+
+        <!-- convert FROM -->
+        <label><br>
+            Convertir <b>DE</b>
+            <select class="currency-from">
+                <option value="BRL">Real Brasileiro (BRL)</option>
+                <option value="USD">Dólar Americano (USD)</option>
+                <option value="EUR">Euro (EUR)</option>
+                <option value="GBP">Libra Esterlina (GBP)</option>
+                <option value="BTC">Bitcoin (BTC)</option>
+            </select>
+        </label>
+
+        <!-- Convert TO -->
+        <label>
+            Convertir <b>PARA</b>
+            <select class="currency-select">
+                <option value="BRL">Real Brasileiro (BRL)</option>
+                <option value="USD">Dólar Americano (USD)</option>
+                <option value="EUR">Euro (EUR)</option>
+                <option value="GBP">Libra Esterlina (GBP)</option>
+                <option value="BTC">Bitcoin (BTC)</option>
+            </select>
+        </label>
+
+        <!-- Input Value -->
+        <label>
+            <b>Valor</b>
+            <input class="input-currency" type="number" placeholder="0.00">
+        </label>
+
+        <button class="convertButton">CONVERTIR</button>
+
+        <!-- Result -->
+        <section>
+            <div class="currency-box">
+                <img class="currency-img-from" src="./assets/real.png" alt="moeda-origem">
+                <p class="currency" id="currency-name-from">Real Brasileiro</p>
+                <p class="currency-value-to-convert">0.00</p>
+            </div>
+
+            <img class="imgSeta" src="./assets/setaAnimada.gif" alt="seta">
+
+            <div class="currency-box">
+                <img class="currency-img" src="./assets/dolar.png" alt="moeda-destino">
+                <p class="currency" id="currency-name">Dólar Americano</p>
+                <p class="currency-value">0.00</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>© 2025 — Desenvolvido por <b>David Carvalho</b><br>
+                Projeto educacional <b>DevClub</b></p>
+            <p class="contact"><b>Contato</b> +55 (45) 9.9922-3818</p>
+        </footer>
+
+    </main>
+
+    <!-- JavaScript -->
+    <script src="scripts.js"></script>
+
+</body>
+
+</html>
